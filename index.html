@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Fland - Studios · 伐木模拟器</title>
+    <style>
+        /* 纯白背景，极简风格，无任何表情包或装饰图标 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            color: #111111;
+            line-height: 1.4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: 2.1rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #1a1a1a;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        /* 中间横线 */
+        .divider {
+            border: 0;
+            height: 1px;
+            background: #d4d4d4;
+            width: 100%;
+            margin: 0 0 2.8rem 0;
+        }
+
+        /* 双按钮并排 */
+        .button-row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 2rem;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .button-item {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .button-label {
+            font-size: 0.9rem;
+            font-weight: 450;
+            color: #3c3c3c;
+            margin-bottom: 0.7rem;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.85rem 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: center;
+            background-color: #ffffff;
+            border: 1px solid #b0b0b0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #1f1f1f;
+            text-decoration: none;
+            font-family: inherit;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .btn:hover {
+            background-color: #f5f5f5;
+            border-color: #8a8a8a;
+        }
+
+        .btn:active {
+            background-color: #eaeaea;
+            transform: scale(0.98);
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 520px) {
+            .button-row {
+                gap: 1rem;
+            }
+            .button-item {
+                min-width: 130px;
+            }
+            .btn {
+                padding: 0.7rem 0.3rem;
+                font-size: 1rem;
+            }
+            .button-label {
+                font-size: 0.8rem;
+            }
+            .main-title {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .button-row {
+                gap: 0.8rem;
+            }
+            .button-item {
+                min-width: 120px;
+            }
+            .btn {
+                font-size: 0.95rem;
+                padding: 0.65rem 0.2rem;
+            }
+        }
+
+        /* 禁止任何伪元素生成表情或符号 */
+        .btn::before, .btn::after, .button-label::before, .button-label::after {
+            content: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="main-title">Fland - Studios伐木模拟器</h1>
+    <hr class="divider">
+
+    <div class="button-row">
+        <!-- 在线游玩：跳转到 treegame.html -->
+        <div class="button-item">
+            <div class="button-label">在现游玩Treegame</div>
+            <a href="treegame.html" class="btn">在线游玩</a>
+        </div>
+        <!-- 下载Treegame：直接下载同目录下的 Treegame.zip -->
+        <div class="button-item">
+            <div class="button-label">下载Treegame (Windows)</div>
+            <a href="Treegame.zip" download="Treegame.zip" class="btn">下载</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
