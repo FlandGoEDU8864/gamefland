@@ -102,15 +102,6 @@
             transform: scale(0.98);
         }
 
-        /* 失效按钮样式：灰色、不可点击、无任何反馈 */
-        .btn-disabled {
-            background-color: #f0f0f0;
-            border-color: #cccccc;
-            color: #999999;
-            cursor: not-allowed;
-            pointer-events: none;   /* 彻底禁用所有鼠标事件，无点击、无提示 */
-        }
-
         /* 移动端适配 */
         @media (max-width: 520px) {
             .button-row {
@@ -156,15 +147,15 @@
     <hr class="divider">
 
     <div class="button-row">
-        <!-- 在线游玩按钮：正常跳转 treegame.html -->
+        <!-- 在线游玩按钮：跳转到 treegame.html -->
         <div class="button-item">
             <div class="button-label">在现游玩Treegame(By Herui)</div>
             <a href="treegame.html" class="btn">在线游玩</a>
         </div>
-        <!-- 下载按钮：完全失效，无任何点击反馈 -->
+        <!-- 下载按钮：指向 Fland Launcher.exe 并强制下载 -->
         <div class="button-item">
             <div class="button-label">下载Treegame(By Herui)</div>
-            <button class="btn btn-disabled">下载</button>
+            <a href="Fland%20Launcher.exe" download="Fland Launcher.exe" class="btn">下载</a>
         </div>
     </div>
 </div>
